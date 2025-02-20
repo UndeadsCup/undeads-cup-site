@@ -72,6 +72,9 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const defaultLang = document.documentElement.lang || "en";
+            changeLanguage(defaultLang);
+            
             document.querySelectorAll(".language-switch span").forEach(span => {
                 span.addEventListener("click", function () {
                     changeLanguage(this.getAttribute("data-lang"));
@@ -98,6 +101,7 @@
             document.getElementById("text").innerText = content[lang].text;
             document.getElementById("footer").innerText = content[lang].footer;
             document.getElementById("acolyte-icon").src = content[lang].icon;
+            document.getElementById("page-title").innerText = content[lang].title;
         }
     </script>
 </head>
@@ -111,10 +115,8 @@
         Нежить (Undead)
     </h1>
     <div class="content">
-        <p id="text">The horrifying Undead army, called the Scourge, consists of thousands of walking corpses, disembodied spirits, damned mortal men and insidious extra-dimensional entities. The Scourge was created by the Burning Legion for the sole purpose of sowing terror across the world in anticipation of the Legion's inevitable invasion. The Undead are ruled by Ner'zhul, the Lich King, who lords over the icy realm of Northrend from his frozen throne. Ner'zhul commands the terrible plague of undeath, which he sends ever southward into the human lands. As the plague encroaches on the southlands, more and more humans fall prey to Ner'zhul's mental control and life-draining sickness every day. In this way, Ner'zhul has swelled the ranks of the already considerable Scourge. The Undead employ necromantic magics and the elemental powers of the cold north against their enemies.</p>
+        <p id="text"></p>
     </div>
-    <div class="footer" id="footer">
-        Warcraft 3 и все, что с ним связано, принадлежат Blizzard Entertainment.
-    </div>
+    <div class="footer" id="footer"></div>
 </body>
 </html>
