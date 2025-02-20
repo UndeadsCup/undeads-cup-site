@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warcraft 3 - Undead</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #ddd;
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+        }
+        h1 {
+            color: #9c27b0;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 22px;
+            line-height: 1.6;
+            font-weight: normal;
+        }
+        .icon {
+            width: 100px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .language-switch span {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .language-switch span:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            font-size: 10px;
+            color: #888;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .discord-text {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #7289DA;
+        }
+        .discord-text:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".language-switch span").forEach(span => {
+                span.addEventListener("click", function () {
+                    changeLanguage(this.getAttribute("data-lang"));
+                });
+            });
+        });
+        
+        function changeLanguage(lang) {
+            const content = {
+                "ru": {
+                    "title": "Нежить (Undead)",
+                    "text": "Ужасающая армия Нежити, известная как Плеть, состоит из тысяч живых мертвецов, бесплотных духов, проклятых смертных и коварных внеземных сущностей. Плеть была создана Пылающим Легионом с единственной целью - сеять страх по всему миру в преддверии неизбежного вторжения Легиона. Нежить управляется Нер'зулом, Королем-личом, который правит ледяным царством Нордскола со своего замороженного трона. Нер'зул владеет ужасной чумой нежити, которую он направляет на юг, в земли людей. По мере распространения чумы все больше людей подпадают под ментальный контроль Нер'зула и его высасывающую жизнь болезнь. Таким образом, Нер'зул увеличивает ряды уже значительной Плети. Нежить использует некромантическую магию и силы стихий холодного севера против своих врагов.",
+                    "footer": "WarCraft 3 — собственность Blizzard."
+                },
+                "en": {
+                    "title": "Undead",
+                    "text": "The horrifying Undead army, called the Scourge, consists of thousands of walking corpses, disembodied spirits, damned mortal men and insidious extra-dimensional entities. The Scourge was created by the Burning Legion for the sole purpose of sowing terror across the world in anticipation of the Legion's inevitable invasion. The Undead are ruled by Ner'zhul, the Lich King, who lords over the icy realm of Northrend from his frozen throne. Ner'zhul commands the terrible plague of undeath, which he sends ever southward into the human lands. As the plague encroaches on the southlands, more and more humans fall prey to Ner'zhul's mental control and life-draining sickness every day. In this way, Ner'zhul has swelled the ranks of the already considerable Scourge. The Undead employ necromantic magics and the elemental powers of the cold north against their enemies.",
+                    "footer": "WarCraft 3 is the property of Blizzard."
+                }
+            };
+            document.getElementById("title").innerText = content[lang].title;
+            document.getElementById("text").innerText = content[lang].text;
+            document.getElementById("footer").innerText = content[lang].footer;
+        }
+    </script>
+</head>
+<body>
+    <a href="#" class="discord-text">Join our Discord</a>
+    <div class="language-switch">
+        <span data-lang="en">EN</span> | <span data-lang="ru">RU</span>
+    </div>
+    <h1 id="title">
+        <img src="http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif" class="icon" alt="Acolyte">
+        Нежить (Undead)
+    </h1>
+    <div class="content">
+        <p id="text">The horrifying Undead army, called the Scourge, consists of thousands of walking corpses, disembodied spirits, damned mortal men and insidious extra-dimensional entities. The Scourge was created by the Burning Legion for the sole purpose of sowing terror across the world in anticipation of the Legion's inevitable invasion. The Undead are ruled by Ner'zhul, the Lich King, who lords over the icy realm of Northrend from his frozen throne. Ner'zhul commands the terrible plague of undeath, which he sends ever southward into the human lands. As the plague encroaches on the southlands, more and more humans fall prey to Ner'zhul's mental control and life-draining sickness every day. In this way, Ner'zhul has swelled the ranks of the already considerable Scourge. The Undead employ necromantic magics and the elemental powers of the cold north against their enemies.</p>
+    </div>
+    <div class="footer" id="footer">
+        WarCraft 3 — собственность Blizzard.
+    </div>
+</body>
+</html>
