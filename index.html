@@ -72,7 +72,7 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const defaultLang = document.documentElement.lang || "en";
+            const defaultLang = document.documentElement.lang || "ru";
             changeLanguage(defaultLang);
             
             document.querySelectorAll(".language-switch span").forEach(span => {
@@ -98,7 +98,6 @@
             document.getElementById("title-text").innerText = content[lang].title;
             document.getElementById("text").innerText = content[lang].text;
             document.getElementById("footer").innerText = content[lang].footer;
-            document.getElementById("page-title").innerText = content[lang].title;
         }
     </script>
 </head>
