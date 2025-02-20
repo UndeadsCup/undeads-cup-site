@@ -87,20 +87,17 @@
                 "ru": {
                     "title": "Нежить (Undead)",
                     "text": "Ужасающая армия Нежити, известная как Плеть, состоит из тысяч живых мертвецов, бесплотных духов, проклятых смертных и коварных внеземных сущностей. Плеть была создана Пылающим Легионом с единственной целью - сеять страх по всему миру в преддверии неизбежного вторжения Легиона. Нежить управляется Нер'зулом, Королем-личом, который правит ледяным царством Нордскола со своего замороженного трона. Нер'зул владеет ужасной чумой нежити, которую он направляет на юг, в земли людей. По мере распространения чумы все больше людей подпадают под ментальный контроль Нер'зула и его высасывающую жизнь болезнь. Таким образом, Нер'зул увеличивает ряды уже значительной Плети. Нежить использует некромантическую магию и силы стихий холодного севера против своих врагов.",
-                    "footer": "Warcraft 3 и все, что с ним связано, принадлежат Blizzard Entertainment.",
-                    "icon": "http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif"
+                    "footer": "Warcraft 3 и все, что с ним связано, принадлежат Blizzard Entertainment."
                 },
                 "en": {
                     "title": "Undead",
                     "text": "The horrifying Undead army, called the Scourge, consists of thousands of walking corpses, disembodied spirits, damned mortal men and insidious extra-dimensional entities. The Scourge was created by the Burning Legion for the sole purpose of sowing terror across the world in anticipation of the Legion's inevitable invasion. The Undead are ruled by Ner'zhul, the Lich King, who lords over the icy realm of Northrend from his frozen throne. Ner'zhul commands the terrible plague of undeath, which he sends ever southward into the human lands. As the plague encroaches on the southlands, more and more humans fall prey to Ner'zhul's mental control and life-draining sickness every day. In this way, Ner'zhul has swelled the ranks of the already considerable Scourge. The Undead employ necromantic magics and the elemental powers of the cold north against their enemies.",
-                    "footer": "Warcraft 3 and all related content belong to Blizzard Entertainment.",
-                    "icon": "http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif"
+                    "footer": "Warcraft 3 and all related content belong to Blizzard Entertainment."
                 }
             };
-            document.getElementById("title").innerText = content[lang].title;
+            document.getElementById("title-text").innerText = content[lang].title;
             document.getElementById("text").innerText = content[lang].text;
             document.getElementById("footer").innerText = content[lang].footer;
-            document.getElementById("acolyte-icon").src = content[lang].icon;
             document.getElementById("page-title").innerText = content[lang].title;
         }
     </script>
@@ -110,9 +107,9 @@
     <div class="language-switch">
         <span data-lang="en">EN</span> | <span data-lang="ru">RU</span>
     </div>
-    <h1 id="title">
+    <h1>
         <img id="acolyte-icon" src="http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif" class="icon" alt="Acolyte">
-        Нежить (Undead)
+        <span id="title-text">Нежить (Undead)</span>
     </h1>
     <div class="content">
         <p id="text"></p>
