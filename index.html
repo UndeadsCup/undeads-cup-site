@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warcraft 3 - Undead</title>
+    <title>Undeads Cup</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,6 +11,13 @@
             text-align: center;
             padding: 20px;
             background-color: #000000;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         h1 {
             color: #9c27b0;
@@ -45,10 +52,10 @@
         .footer {
             font-size: 10px;
             color: #888;
-            position: absolute;
-            bottom: 10px;
             width: 100%;
             text-align: center;
+            margin-top: auto;
+            padding-bottom: 10px;
         }
         .discord-text {
             position: absolute;
@@ -77,17 +84,20 @@
                 "ru": {
                     "title": "Нежить (Undead)",
                     "text": "Ужасающая армия Нежити, известная как Плеть, состоит из тысяч живых мертвецов, бесплотных духов, проклятых смертных и коварных внеземных сущностей. Плеть была создана Пылающим Легионом с единственной целью - сеять страх по всему миру в преддверии неизбежного вторжения Легиона. Нежить управляется Нер'зулом, Королем-личом, который правит ледяным царством Нордскола со своего замороженного трона. Нер'зул владеет ужасной чумой нежити, которую он направляет на юг, в земли людей. По мере распространения чумы все больше людей подпадают под ментальный контроль Нер'зула и его высасывающую жизнь болезнь. Таким образом, Нер'зул увеличивает ряды уже значительной Плети. Нежить использует некромантическую магию и силы стихий холодного севера против своих врагов.",
-                    "footer": "WarCraft 3 — собственность Blizzard."
+                    "footer": "Warcraft 3 и все, что с ним связано, принадлежат Blizzard Entertainment.",
+                    "icon": "http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif"
                 },
                 "en": {
                     "title": "Undead",
                     "text": "The horrifying Undead army, called the Scourge, consists of thousands of walking corpses, disembodied spirits, damned mortal men and insidious extra-dimensional entities. The Scourge was created by the Burning Legion for the sole purpose of sowing terror across the world in anticipation of the Legion's inevitable invasion. The Undead are ruled by Ner'zhul, the Lich King, who lords over the icy realm of Northrend from his frozen throne. Ner'zhul commands the terrible plague of undeath, which he sends ever southward into the human lands. As the plague encroaches on the southlands, more and more humans fall prey to Ner'zhul's mental control and life-draining sickness every day. In this way, Ner'zhul has swelled the ranks of the already considerable Scourge. The Undead employ necromantic magics and the elemental powers of the cold north against their enemies.",
-                    "footer": "WarCraft 3 is the property of Blizzard."
+                    "footer": "Warcraft 3 and all related content belong to Blizzard Entertainment.",
+                    "icon": "http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif"
                 }
             };
             document.getElementById("title").innerText = content[lang].title;
             document.getElementById("text").innerText = content[lang].text;
             document.getElementById("footer").innerText = content[lang].footer;
+            document.getElementById("acolyte-icon").src = content[lang].icon;
         }
     </script>
 </head>
@@ -97,14 +107,14 @@
         <span data-lang="en">EN</span> | <span data-lang="ru">RU</span>
     </div>
     <h1 id="title">
-        <img src="http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif" class="icon" alt="Acolyte">
+        <img id="acolyte-icon" src="http://classic.battle.net/war3/images/undead/units/animations/acolyte.gif" class="icon" alt="Acolyte">
         Нежить (Undead)
     </h1>
     <div class="content">
         <p id="text">The horrifying Undead army, called the Scourge, consists of thousands of walking corpses, disembodied spirits, damned mortal men and insidious extra-dimensional entities. The Scourge was created by the Burning Legion for the sole purpose of sowing terror across the world in anticipation of the Legion's inevitable invasion. The Undead are ruled by Ner'zhul, the Lich King, who lords over the icy realm of Northrend from his frozen throne. Ner'zhul commands the terrible plague of undeath, which he sends ever southward into the human lands. As the plague encroaches on the southlands, more and more humans fall prey to Ner'zhul's mental control and life-draining sickness every day. In this way, Ner'zhul has swelled the ranks of the already considerable Scourge. The Undead employ necromantic magics and the elemental powers of the cold north against their enemies.</p>
     </div>
     <div class="footer" id="footer">
-        WarCraft 3 — собственность Blizzard.
+        Warcraft 3 и все, что с ним связано, принадлежат Blizzard Entertainment.
     </div>
 </body>
 </html>
